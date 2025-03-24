@@ -28,6 +28,12 @@ spring:
           - Path=/license/**
           filters:
           - RewritePath=/license/(?<path>.*), /$\{path}
+       - id: google-service
+         uri: lb://google-service
+         predicates:
+         - Path=/google/**
+         filters:
+         - RedirectTo=301,https://google.com
 
 
        
