@@ -29,7 +29,7 @@ spring:
           filters:
           - RewritePath=/license/(?<path>.*), /$\{path}
        - id: google-service
-         uri: lb://google-service
+         uri: https://google.com
          predicates:
          - Path=/google/**
          filters:
