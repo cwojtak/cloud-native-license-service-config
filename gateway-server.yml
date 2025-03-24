@@ -32,6 +32,12 @@ spring:
             - Path=/google/**
           filters:
             - RedirectTo=301,https://google.com
+        - id: arizona-service
+          uri: https://arizona.edu
+          predicates:
+            - Path=/arizona/**
+          filters:
+            - RedirectTo=301,https://arizona.edu
 management:
   endpoints:
     web:
